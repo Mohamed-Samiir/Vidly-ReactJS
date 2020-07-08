@@ -40,7 +40,6 @@ class Movies extends Component {
   };
 
   handlePageChange = (page) => {
-    console.log(page);
     this.setState({ currentPage: page });
   };
 
@@ -74,7 +73,7 @@ class Movies extends Component {
     const { length: count } = this.state.movies;
     const { pageSize, currentPage, sortColumn } = this.state;
 
-    if (count === 0) return <h2>There is no movies in stock</h2>;
+    if (count === 0) return <h4>There is no movies in stock</h4>;
 
     return (
       <div className="row">
@@ -88,7 +87,7 @@ class Movies extends Component {
 
         <div className="col">
           <div>
-            <h2>Number Of Movies In Stock: {totalCount}</h2>
+            <h4>Number Of Movies In Stock: {totalCount}</h4>
 
             <MoviesTable
               movies={movies}

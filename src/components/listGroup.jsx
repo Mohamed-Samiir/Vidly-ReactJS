@@ -14,7 +14,9 @@ const ListGroup = (props) => {
       {genres.map((g) => (
         <li
           className={
-            g === selectedGenre ? "list-group-item active" : "list-group-item"
+            g === selectedGenre
+              ? "list-group-item clickable active"
+              : "list-group-item clickable"
           }
           key={g[valueProperity]}
           onClick={() => onGenreSelect(g)}
