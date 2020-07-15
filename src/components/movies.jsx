@@ -7,6 +7,7 @@ import { paginate } from "../utils/paginate";
 import ListGroup from "./listGroup";
 import _ from "lodash";
 import { sort } from "semver";
+import { Link } from "react-router-dom";
 
 class Movies extends Component {
   state = {
@@ -88,7 +89,13 @@ class Movies extends Component {
         <div className="col">
           <div>
             <h4>Number Of Movies In Stock: {totalCount}</h4>
-
+            <Link
+              to="/movies/new"
+              className="btn btn-primary btn-sm"
+              style={{ marginBottom: "20px" }}
+            >
+              Add New
+            </Link>
             <MoviesTable
               movies={movies}
               sortColumn={sortColumn}
