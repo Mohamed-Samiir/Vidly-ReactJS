@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Movies from "./movies";
 import _ from "lodash";
 
 class TableBody extends Component {
